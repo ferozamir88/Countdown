@@ -1,0 +1,49 @@
+<script>
+  var countdownElement = document.getElementById('countdown');
+  var countdown = new Countdown(countdownElement, {
+    countdownDate: new Date('2023-03-31').getTime(), // Date to countdown to
+    countdownText: 'Our Launch', // Text to display above the countdown
+    interval: 500, // Update interval in milliseconds
+  });
+</script>
+<div id="countdown"></div>
+
+<style>
+  #countdown {
+    background: lightblue;
+    width: 100%;
+    height: 100vh;
+    padding-top: 10%;
+  }
+  .countdown-timer {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .countdown-text {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .countdown-digit {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+
+  @media (max-width: 600px) {
+    .countdown-digit {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+    }
+  }
+</style>
